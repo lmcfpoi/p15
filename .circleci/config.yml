@@ -6,11 +6,11 @@ jobs:
     docker:
       - image: cimg/base:2020.01
     steps:
-      - run: mkdir -p workspace
-      - run: cd workspace
+      #- run: mkdir -p workspace
+      #- run: cd workspace
       - run: echo  "HELLLLLOOOOO WWWWOOOORRRRLLLLLLD" > output.txt
       - persist_to_workspace:
-          root: workspace
+          root: .
           paths:
             - output.txt
 
