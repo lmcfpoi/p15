@@ -9,7 +9,7 @@ jobs:
       - run: mkdir -p workspace
       - run: echo  "HELLLLLOOOOO WWWWOOOORRRRLLLLLLD" > output.txt
       - persist_to_workspace:
-          root: ~/workspace
+          root: workspace
           paths:
             - output.txt
 
@@ -22,7 +22,7 @@ jobs:
           # root: ~/
           # paths:
           #   - output.txt
-      - run: cat ~/output.txt
+      - run: cat /workspace/output.txt
           # root: ~/.circleci
           # paths:
           #   - output.txt
