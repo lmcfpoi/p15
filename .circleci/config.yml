@@ -18,10 +18,11 @@ jobs:
       - image: cimg/base:2020.01
     steps:
       - attach_workspace:
-          root: ~/
-          paths:
-            - output.txt
-      - run: cat output.txt
+          at: /tmp/workspace
+          #root: ~/
+          #paths:
+          #  - output.txt
+      - run: cat /tmp/workspace/output.txt
 
 workflows:
   default:
