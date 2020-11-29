@@ -9,7 +9,7 @@ jobs:
       - run: mkdir -p workspace
       - run: echo  "HELLLLLOOOOO WWWWOOOORRRRLLLLLLD" > output.txt
       - persist_to_workspace:
-          root: ~/.circleci
+          root: ~/workspace
           paths:
             - output.txt
 
@@ -18,11 +18,11 @@ jobs:
       - image: cimg/base:2020.01
     steps:
       - attach_workspace:
-          at: ~/.circleci
+          at: ~/workspace
           # root: ~/
           # paths:
           #   - output.txt
-      - run: cat ~/.circle.ci/output.txt
+      - run: cat ~/workspace/output.txt
           # root: ~/.circleci
           # paths:
           #   - output.txt
