@@ -18,11 +18,11 @@ jobs:
       - image: cimg/base:2020.01
     steps:
       - attach_workspace:
-          at: ~/workspace
+          at: ~/
           # root: ~/
           # paths:
           #   - output.txt
-      - run: cat ~/workspace/output.txt
+      - run: cat ~/output.txt
           # root: ~/.circleci
           # paths:
           #   - output.txt
